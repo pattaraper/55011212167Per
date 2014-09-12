@@ -32,7 +32,7 @@ let tipCalc = TipCalculator(total: 33.25, taxPct: 0.06)
 tipCalc.returnPossibleTips()
 //
 
-let array:Array<Int> = [1,2,3,4]
+/*let array:Array<Int> = [1,2,3,4]
 let dictionary:Dictionary<String,Int> = ["dog":1,"elepphant":2]
 
 var airports:[String:String] = ["TY0":"Tokyo","DUB":"Dublin"]
@@ -88,5 +88,5 @@ importanimal.selectfood("Rabbit")
 importanimal.change("Rabbit", foodCh: "meat")
 
 
-println(importanimal.Animal)
+println(importanimal.Animal)*/
 
