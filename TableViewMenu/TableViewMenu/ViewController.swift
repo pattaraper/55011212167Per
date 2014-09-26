@@ -37,7 +37,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.imageView!.image = imageName
         return cell
     }
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath!) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         let alert = UIAlertController(title: "item Select", message: "Your Selected item \(tableData[indexPath.row])", preferredStyle: UIAlertControllerStyle.Alert)
        
         alert.addAction(UIAlertAction(title: "OK",style: UIAlertActionStyle.Default,handler: {(alert:UIAlertAction!)in print("An Alert if type\(alert.style.hashValue)was tapped!")}))
