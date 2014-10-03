@@ -23,18 +23,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bu Total(Post-tax):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-Dj-Zx7">
-                                <rect key="frame" x="28" y="94" width="175" height="37"/>
+                                <rect key="frame" x="28" y="94" width="145" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kak-zy-Y5n">
-                                <rect key="frame" x="181" y="98" width="178" height="30"/>
+                                <rect key="frame" x="192" y="86" width="178" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tax Percentage(0%):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vw4-RN-XGY">
-                                <rect key="frame" x="11" y="145" width="192" height="29"/>
+                                <rect key="frame" x="0.0" y="131" width="173" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,18 +46,23 @@
                                 </state>
                                 <connections>
                                     <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ud6-tW-owx"/>
+                                    <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="pM8-Xf-7ze"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YoM-AA-g65">
+                                <rect key="frame" x="37" y="275" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="8eL-Kz-CW9"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="UJr-DG-uRW"/>
+                                </connections>
+                            </tableView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JqK-Bc-JzP">
-                                <rect key="frame" x="179" y="144" width="182" height="31"/>
+                                <rect key="frame" x="190" y="122" width="182" height="31"/>
                                 <connections>
                                     <action selector="taxPercentageChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="LxJ-hF-5A9"/>
                                 </connections>
                             </slider>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YoM-AA-g65">
-                                <rect key="frame" x="37" y="275" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -69,7 +74,7 @@
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="600"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="resultsTableView" destination="YoM-AA-g65" id="tgg-8A-L3E"/>
+                        <outlet property="TableView" destination="YoM-AA-g65" id="xi3-nJ-Z18"/>
                         <outlet property="taxPctLabel" destination="Vw4-RN-XGY" id="l6b-j6-ecW"/>
                         <outlet property="taxPctslider" destination="JqK-Bc-JzP" id="QED-IM-30o"/>
                         <outlet property="totalTextField" destination="Kak-zy-Y5n" id="BwJ-ES-UIC"/>
@@ -82,7 +87,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1291" y="916"/>
+            <point key="canvasLocation" x="1290.5" y="915.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q71-XM-LJb">
