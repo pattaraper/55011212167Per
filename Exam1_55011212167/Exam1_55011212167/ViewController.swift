@@ -22,10 +22,10 @@ class ViewController: UIViewController {
     }
        
     @IBAction func totalButton(sender: AnyObject) {
-        let volum:Double = volumText!.text
-        var price:Double = priceText!.text
+        var volum = Double((volumText.text as NSString).doubleValue)
+        let price = Double((priceText.text as NSString).doubleValue)
         var total = volum * price
-        totalText.text = "\(total)"
+        totalText.text = "\(total)Bath"
     }
 }
 
