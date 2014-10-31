@@ -12,7 +12,7 @@ protocol ColorTwoViewControllerDelegate{
 }
 
 class colorTwoViewController: UIViewController {
-
+    
     @IBOutlet var red: UIButton!
     @IBOutlet var green: UIButton!
     @IBOutlet var blue: UIButton!
@@ -24,11 +24,11 @@ class colorTwoViewController: UIViewController {
     
     @IBAction func colorSelectionButton(sender: UIButton) {
         colorLable.text = sender.titleLabel!.text!
-      
-       if(colorLable.text == "Red"){
+        
+        if(colorLable.text == "Red"){
             colorLable.textColor = UIColor.redColor()
-       }
-         if(colorLable.text == "Random"){
+        }
+        if(colorLable.text == "Random"){
             
             colorLable.textColor = getRandomColor()
             
@@ -60,7 +60,7 @@ class colorTwoViewController: UIViewController {
         colorLable.layer.borderColor = UIColor.blackColor().CGColor
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
