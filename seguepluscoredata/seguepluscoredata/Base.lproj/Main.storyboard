@@ -62,6 +62,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8IW-4d-ukB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2zf-iB-cit" customClass="AddToViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAL-8O-bwa">
@@ -77,7 +78,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="dOV-kh-nkW">
-                                        <barButtonItem key="leftBarButtonItem" title="Save" id="DQ6-n7-c7M"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Save" id="DQ6-n7-c7M">
+                                            <connections>
+                                                <action selector="saveData:" destination="gyj-9Y-7q0" id="KPN-cr-X0g"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -101,6 +106,57 @@
                                     <rect key="frame" x="76" y="178" width="55" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDname :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6y-OD-z2v">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="62" y="227" width="69" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnv-pe-a6C">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="137" y="223" width="166" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C6D-3V-VuE">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="137" y="267" width="166" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BirthDay :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulc-ws-1SC">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="55" y="271" width="76" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mj5-Vj-SfW">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="137" y="313" width="166" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hnq-re-T4H">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="317" width="40" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -109,6 +165,12 @@
                                 <exclude reference="w0h-ZG-GMi"/>
                                 <exclude reference="nkC-HB-sLD"/>
                                 <exclude reference="SyK-ry-gPi"/>
+                                <exclude reference="f6y-OD-z2v"/>
+                                <exclude reference="cnv-pe-a6C"/>
+                                <exclude reference="C6D-3V-VuE"/>
+                                <exclude reference="Ulc-ws-1SC"/>
+                                <exclude reference="mj5-Vj-SfW"/>
+                                <exclude reference="Hnq-re-T4H"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -117,6 +179,12 @@
                                 <include reference="w0h-ZG-GMi"/>
                                 <include reference="nkC-HB-sLD"/>
                                 <include reference="SyK-ry-gPi"/>
+                                <include reference="f6y-OD-z2v"/>
+                                <include reference="cnv-pe-a6C"/>
+                                <include reference="C6D-3V-VuE"/>
+                                <include reference="Ulc-ws-1SC"/>
+                                <include reference="mj5-Vj-SfW"/>
+                                <include reference="Hnq-re-T4H"/>
                             </mask>
                         </variation>
                     </view>
@@ -124,6 +192,7 @@
                         <barButtonItem title="Item" id="wZU-Ja-ZnE"/>
                     </toolbarItems>
                     <connections>
+                        <outlet property="idNameTextField" destination="cnv-pe-a6C" id="wOQ-eh-5jb"/>
                         <outlet property="nameTextField" destination="nkC-HB-sLD" id="c3G-nq-3Bc"/>
                     </connections>
                 </viewController>
